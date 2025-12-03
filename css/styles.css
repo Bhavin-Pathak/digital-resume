@@ -1,92 +1,118 @@
-/* ======================
-   CSS CUSTOM PROPERTIES
-   ====================== */
 :root {
   /* Primary color palette */
-  --primary-color: #1e3a8a;        /* Main brand color */
-  --primary-light: #3b5fa6;       /* Lighter shade of primary */
-  --secondary-color: #1e40af;     /* Secondary brand color */
-  --secondary-light: #2563eb;     /* Lighter shade of secondary */
-  
+  --primary-color: #1e3a8a;
+  /* Main brand color */
+  --primary-light: #3b5fa6;
+  /* Lighter shade of primary */
+  --secondary-color: #1e40af;
+  /* Secondary brand color */
+  --secondary-light: #2563eb;
+  /* Lighter shade of secondary */
+
   /* Gradients */
   --gradient-primary: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
   --gradient-light: linear-gradient(135deg, #3b5fa6 0%, #60a5fa 100%);
-  
+
   /* Text colors */
-  --text-primary: #1a1a1a;        /* Main text color */
-  --text-secondary: #4b5563;      /* Secondary text color */
-  --text-light: #6b7280;          /* Light text color */
-  
+  --text-primary: #1a1a1a;
+  /* Main text color */
+  --text-secondary: #4b5563;
+  /* Secondary text color */
+  --text-light: #6b7280;
+  /* Light text color */
+
   /* Background colors */
-  --background: #ffffff;          /* Main background */
-  --background-alt: #f8fafc;      /* Alternate background */
-  --border-color: #e5e7eb;        /* Border color */
-  --header-border-color: #000000; /* Header border color
+  --background: #ffffff;
+  /* Main background */
+  --background-alt: #f8fafc;
+  /* Alternate background */
+  --border-color: #e5e7eb;
+  /* Border color */
+  --header-border-color: #000000;
+  /* Header border color
 
   /* Spacing scale */
-  --spacing-xs: 0.25rem;    /* 4px */
-  --spacing-sm: 0.5rem;     /* 8px */
-  --spacing-md: 1rem;       /* 16px */
-  --spacing-lg: 1.5rem;     /* 24px */
-  --spacing-xl: 2rem;       /* 32px */
-  --spacing-2xl: 3rem;      /* 48px */
+  --spacing-xs: 0.25rem;
+  /* 4px */
+  --spacing-sm: 0.5rem;
+  /* 8px */
+  --spacing-md: 1rem;
+  /* 16px */
+  --spacing-lg: 1.5rem;
+  /* 24px */
+  --spacing-xl: 2rem;
+  /* 32px */
+  --spacing-2xl: 3rem;
+  /* 48px */
 
   /* Typography */
-  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+
   /* Font sizes */
-  --font-size-sm: 0.875rem;   /* 14px */
-  --font-size-base: 16px;     /* Base size (1rem) */
-  --font-size-lg: 1.125rem;   /* 18px */
-  --font-size-xl: 1.5rem;     /* 24px */
-  --font-size-2xl: 2rem;      /* 32px */
-  --font-size-3xl: 2.5rem;    /* 40px */
-  
+  --font-size-sm: 0.875rem;
+  /* 14px */
+  --font-size-base: 16px;
+  /* Base size (1rem) */
+  --font-size-lg: 1.125rem;
+  /* 18px */
+  --font-size-xl: 1.5rem;
+  /* 24px */
+  --font-size-2xl: 2rem;
+  /* 32px */
+  --font-size-3xl: 2.5rem;
+  /* 40px */
+
   /* Line heights */
-  --line-height-tight: 1.2;   /* For headings */
-  --line-height-normal: 1.5;  /* For body text */
-  --line-height-relaxed: 1.7; /* For long-form content */
+  --line-height-tight: 1.2;
+  /* For headings */
+  --line-height-normal: 1.5;
+  /* For body text */
+  --line-height-relaxed: 1.7;
+  /* For long-form content */
 
   /* Border radius */
-  --border-radius-sm: 4px;    /* Small radius */
-  --border-radius-md: 8px;    /* Medium radius */
-  --border-radius-lg: 12px;   /* Large radius */
+  --border-radius-sm: 4px;
+  /* Small radius */
+  --border-radius-md: 8px;
+  /* Medium radius */
+  --border-radius-lg: 12px;
+  /* Large radius */
 
   /* Box shadows */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);    /* Small shadow */
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);    /* Medium shadow */
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);  /* Large shadow */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  /* Small shadow */
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+  /* Medium shadow */
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+  /* Large shadow */
 
   /* Animation timings */
-  --transition-fast: 150ms ease;   /* Quick transitions */
-  --transition-normal: 200ms ease; /* Standard transitions */
+  --transition-fast: 150ms ease;
+  /* Quick transitions */
+  --transition-normal: 200ms ease;
+  /* Standard transitions */
 }
 
-/* ======================
-   GLOBAL RESETS
-   ====================== */
-
-/* Reset default browser styles */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;  /* Include padding and border in element's total width/height */
-  margin: 0;              /* Remove default margins */
-  padding: 0;             /* Remove default padding */
+  box-sizing: border-box;
+  /* Include padding and border in element's total width/height */
+  margin: 0;
+  /* Remove default margins */
+  padding: 0;
+  /* Remove default padding */
   /* Smooth transitions for theme changes */
-  transition: background-color var(--transition-fast), 
-              color var(--transition-fast), 
-              border-color var(--transition-fast);
+  transition: background-color var(--transition-fast),
+    color var(--transition-fast), border-color var(--transition-fast);
 }
 
-/* ======================
-   BASE STYLES
-   ====================== */
-
-/* HTML root element */
 html {
-  font-size: var(--font-size-base);  /* Set base font size for rem units */
-  scroll-behavior: smooth;          /* Enable smooth scrolling */
+  font-size: var(--font-size-base);
+  /* Set base font size for rem units */
+  scroll-behavior: smooth;
+  /* Enable smooth scrolling */
 }
 
 /* Main body styles */
@@ -95,39 +121,50 @@ body {
   font-size: var(--font-size-md);
   line-height: var(--line-height-normal);
   color: var(--text-primary);
-  background-color: #f0f2f5;  /* Light gray background */
-  -webkit-font-smoothing: antialiased;    /* Better font rendering on WebKit */
-  -moz-osx-font-smoothing: grayscale;     /* Better font rendering on Firefox */
-  min-height: 100vh;                      /* Full viewport height */
+  background-color: #f0f2f5;
+  /* Light gray background */
+  -webkit-font-smoothing: antialiased;
+  /* Better font rendering on WebKit */
+  -moz-osx-font-smoothing: grayscale;
+  /* Better font rendering on Firefox */
+  min-height: 100vh;
+  /* Full viewport height */
   display: flex;
-  justify-content: center;                /* Center content horizontally */
-  align-items: flex-start;                /* Align content to top */
-  padding: var(--spacing-xl) 0;           /* Vertical padding */
+  justify-content: center;
+  /* Center content horizontally */
+  align-items: flex-start;
+  /* Align content to top */
+  padding: var(--spacing-xl) 0;
+  /* Vertical padding */
 }
 
-/* ======================
-   MAIN CONTAINER
-   ====================== */
-
-/* Main content container */
 .container {
-  max-width: 1000px;                  /* Maximum width for large screens */
-  width: 95%;                        /* Responsive width */
-  margin: 0 auto;                    /* Center container */
-  padding: var(--spacing-2xl);       /* Internal spacing */
+  max-width: 1000px;
+  /* Maximum width for large screens */
+  width: 95%;
+  /* Responsive width */
+  margin: 0 auto;
+  /* Center container */
+  padding: var(--spacing-2xl);
+  /* Internal spacing */
   background-color: var(--background);
   border: 1px solid var(--primary-color);
-  border-radius: 24px;               /* Rounded corners */
-  box-shadow: var(--shadow-lg);      /* Subtle shadow for depth */
-  position: relative;                /* For positioned children */
+  border-radius: 24px;
+  /* Rounded corners */
+  box-shadow: var(--shadow-lg);
+  /* Subtle shadow for depth */
+  position: relative;
+  /* For positioned children */
 }
 
 /* Header section styles */
 .resume-header {
-  background-color: var(--background-alt);  /* Light gray background */
+  background-color: var(--background-alt);
+  /* Light gray background */
   padding: var(--spacing-xl) var(--spacing-xl) var(--spacing-2xl);
   margin-bottom: var(--spacing-xl);
-  border-radius: var(--border-radius-md);   /* Rounded corners */
+  border-radius: var(--border-radius-md);
+  /* Rounded corners */
   border-left: 4px solid transparent;
   background-image: linear-gradient(
       var(--background-alt),
@@ -165,53 +202,8 @@ body {
   line-height: var(--line-height-tight);
 }
 
-.portfolio-icon {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: var(--gradient-primary);
-  color: var(--background);
-  transition: all var(--transition-normal);
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.portfolio-icon i {
-  font-size: 16px;
-  color: var(--background);
-}
-
-.portfolio-icon:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.4);
-}
-
-.portfolio-tooltip {
-  position: absolute;
-  top: -35px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--text-primary);
-  color: var(--background);
-  padding: var(--spacing-xs) var(--spacing-sm);
-  border-radius: var(--border-radius-sm);
-  font-size: var(--font-size-xs);
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity var(--transition-normal);
-}
-
-.portfolio-icon:hover .portfolio-tooltip {
-  opacity: 1;
-}
-
 .title {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xs);
   color: var(--text-secondary);
   margin-bottom: var(--spacing-sm);
   font-weight: 500;
@@ -300,26 +292,23 @@ body {
 }
 
 .social-link:nth-child(1):hover {
-  background-color: #0077b5;
-  border-color: #0077b5;
+  background-color: #000000;
 }
-
 .social-link:nth-child(1):hover .icon {
   color: #ffffff;
 }
 
 .social-link:nth-child(2):hover {
-  background-color: #333;
-  border-color: #333;
+  background-color: #0a66c2;
+  border-color: #0a66c2;
 }
-
 .social-link:nth-child(2):hover .icon {
   color: #ffffff;
 }
 
 .social-link:nth-child(3):hover {
-  background-color: #ffa116;
-  border-color: #ffa116;
+  background-color: #333;
+  border-color: #333;
 }
 
 .social-link:nth-child(3):hover .icon {
@@ -327,15 +316,10 @@ body {
 }
 
 .social-link:nth-child(4):hover {
-  background: linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
-  border-color: transparent;
+  background-color: #ffa116;
+  border-color: #ffa116;
+  background-color: #ffa116;
+  border-color: #ffa116;
 }
 
 .social-link:nth-child(4):hover .icon {
@@ -581,9 +565,9 @@ body {
   padding: 0.35rem 0.85rem;
   background: var(--background);
   border: 1px solid var(--border-color);
-  border-radius: 6px;
+  border-radius: 10px;
   font-size: var(--font-size-sm);
-  font-weight: 500;
+  font-weight: 5;
   color: var(--text-secondary);
   transition: all var(--transition-fast);
 }
@@ -593,7 +577,7 @@ body {
   /* Black border on hover */
   color: #000000;
   /* Black text on hover */
-  transform: translateY(-1px);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-sm);
   background: transparent;
   /* No background color */
@@ -629,10 +613,6 @@ body {
 
   .name-with-icon {
     justify-content: center;
-  }
-
-  .portfolio-icon {
-    display: none;
   }
 
   .header-right {
